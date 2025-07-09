@@ -127,7 +127,7 @@ pub async fn assert_para_throughput(
 		}
 	}
 
-	Ok(())
+	Ok(true)
 }
 
 /// Wait for the first block with a session change.
