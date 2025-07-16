@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1752652721544,
+  "lastUpdate": 1752687112200,
   "repoUrl": "https://github.com/paritytech/polkadot-sdk",
   "entries": {
     "approval-voting-regression-bench": [
@@ -114793,6 +114793,105 @@ window.BENCHMARK_DATA = {
           {
             "name": "approval-voting-parallel",
             "value": 12.47468659562999,
+            "unit": "seconds"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "bkontur@gmail.com",
+            "name": "Branislav Kontur",
+            "username": "bkontur"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "40e1a2a7c99c67fe5201145e473c87e1aea4bf05",
+          "message": "Allow create backport branches to unstable by A4-backport-unstable* tag (#9167)\n\nIn this\n[PR](https://github.com/paritytech/polkadot-sdk/pull/9139#issuecomment-3052828167),\nI added the `A4-backport-unstable2507` label, but no backport branch was\ncreated for `unstable2507`.\n\nWas this intentional or just an oversight or did I miss anything in the\nrelease channel?\nHow do we do backports to unstable2507? If manually, just close this.\n\ncc: @EgorPopelyaev - this PR is just a blind draft (not sure if it\nworks), probably more needs to be fixed and properly tested. If we\nreally need this, could you please take it over the finish line? If not,\njust close it :)\n\nCo-authored-by: Egor_P <egor@parity.io>",
+          "timestamp": "2025-07-16T16:23:51Z",
+          "tree_id": "42f9ddd2a1ed680cc694879a7f84761b03ea1e9c",
+          "url": "https://github.com/paritytech/polkadot-sdk/commit/40e1a2a7c99c67fe5201145e473c87e1aea4bf05"
+        },
+        "date": 1752687095305,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Received from peers",
+            "value": 52940.5,
+            "unit": "KiB"
+          },
+          {
+            "name": "Sent to peers",
+            "value": 63616.340000000004,
+            "unit": "KiB"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-gather-signatures",
+            "value": 0.005593402679999997,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-1",
+            "value": 2.4743799127500017,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-3",
+            "value": 2.4726017741599993,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-2",
+            "value": 2.526236201830001,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting",
+            "value": 0.000018851009999999997,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-distribution",
+            "value": 0.00001827364,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-db",
+            "value": 1.9598753973699996,
+            "unit": "seconds"
+          },
+          {
+            "name": "test-environment",
+            "value": 2.670777319490904,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-distribution/test-environment",
+            "value": 0.00001827364,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting/test-environment",
+            "value": 0.000018851009999999997,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel",
+            "value": 12.37043747512,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-subsystem",
+            "value": 0.44689290925999964,
+            "unit": "seconds"
+          },
+          {
+            "name": "approval-voting-parallel/approval-voting-parallel-0",
+            "value": 2.4848578770699996,
             "unit": "seconds"
           }
         ]
