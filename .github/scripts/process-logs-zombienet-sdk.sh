@@ -76,15 +76,10 @@ jq -r $JQ_QUERY_RELAY "$ZOMBIE_JSON" | while read -r name; do
 done
 echo ""
 
-# Debug
-echo "\n"
-cat $ZOMBIE_JSON
-echo "\n"
-
 # Handle parachains grouped by paraId
 jq -r '.paras // .parachains | to_entries[] | "\(.key)"' "$ZOMBIE_JSON" | while read -r para_id; do
   echo "ParaId: $para_id"
-  jq -r --arg pid "$para_id" "'$JQ_QUERY_PARA_NODES'" "$ZOMBIE_JSON" | while read -r name; do
+  jq -r --arg pid "$para_id" "$JQ_QUERY_PARA_NODES" "$ZOMBIE_JSON" | while read -r name; do
     if [[ "$ZOMBIE_PROVIDER" == "k8s" ]]; then
       # Fetching logs from k8s
       if ! kubectl logs "$name" -c "$name" -n "$NS" > "$TARGET_DIR/$name.log" ; then
