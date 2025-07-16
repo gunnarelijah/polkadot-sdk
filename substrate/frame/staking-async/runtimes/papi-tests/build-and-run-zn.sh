@@ -27,8 +27,8 @@ RUST_LOG=${LOG} ../../../../../target/release/chain-spec-builder \
     create \
     -t development \
     --runtime ../../../../../target/release/wbuild/pallet-staking-async-rc-runtime/fast_runtime_binary.rs.wasm \
-    named-preset local_testnet
+    named-preset fake-s
 mv ./chain_spec.json ./rc.json
 
 echo "✅ launching ZN"
-zombienet --provider native -l text spawn zombienet-staking-runtimes.toml
+zombienet --provider native -l text spawn zn-s.toml
