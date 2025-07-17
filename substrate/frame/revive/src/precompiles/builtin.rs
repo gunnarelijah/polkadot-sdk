@@ -17,12 +17,16 @@
 
 mod blake2f;
 mod bn128;
+mod create2;
 mod ecrecover;
 mod identity;
 mod modexp;
 mod point_eval;
 mod ripemd160;
 mod sha256;
+
+// exported for use in tests
+pub(crate) use create2::ICreate2;
 
 #[cfg(feature = "runtime-benchmarks")]
 mod benchmarking;
@@ -53,6 +57,7 @@ type Production<T> = (
 	bn128::Bn128Pairing<T>,
 	blake2f::Blake2F<T>,
 	point_eval::PointEval<T>,
+	create2::Create2<T>,
 );
 
 #[cfg(feature = "runtime-benchmarks")]

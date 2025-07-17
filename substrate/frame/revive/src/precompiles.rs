@@ -29,6 +29,10 @@ mod builtin;
 
 mod tests;
 
+// exported for use in tests
+#[allow(unused_imports)]
+pub(crate) use builtin::ICreate2;
+
 pub use crate::{
 	exec::{ExecError, PrecompileExt as Ext, PrecompileWithInfoExt as ExtWithInfo},
 	gas::{GasMeter, Token},
